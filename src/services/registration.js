@@ -1,7 +1,7 @@
 const config = require('../config');
 
-// ปลายทาง API ของระบบจัดการกิลด์ (Render) สำหรับลงทะเบียนผู้ใช้จาก LINE
-const REGISTER_URL = 'https://lp-guild-management.onrender.com/api/line/register';
+// ปลายทาง API ของระบบจัดการกิลด์ สำหรับลงทะเบียนผู้ใช้จาก LINE (ตั้งผ่าน NEXT_PUBLIC_API_URL)
+const REGISTER_URL = `${config.backendApiUrl}/api/line/register`;
 
 // ส่งข้อมูลผู้ใช้ไปลงทะเบียนที่ระบบ Render
 // คืนค่าเป็น Response object เพื่อให้ผู้เรียกเช็ก response.ok / อ่าน body เองได้

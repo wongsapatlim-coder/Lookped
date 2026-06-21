@@ -1,7 +1,7 @@
 const config = require('../config');
 
-// ปลายทาง API ของระบบจัดการกิลด์ (Render) สำหรับแจ้งลา/ยกเลิกลาของสมาชิกจาก LINE
-const ABSENCE_URL = 'https://lp-guild-management.onrender.com/api/line/absence';
+// ปลายทาง API ของระบบจัดการกิลด์ สำหรับแจ้งลา/ยกเลิกลาของสมาชิกจาก LINE (ตั้งผ่าน NEXT_PUBLIC_API_URL)
+const ABSENCE_URL = `${config.backendApiUrl}/api/line/absence`;
 
 // แจ้งลา (absent) หรือยกเลิกการลา (unabsent) ของสมาชิกหนึ่งคนสำหรับวันเดียว
 // ระบบหลังบ้านจะ resolve สมาชิกจาก line_user_id เอง (ฝั่ง LINE ไม่ต้องรู้ UUID)

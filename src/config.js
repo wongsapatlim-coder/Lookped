@@ -9,6 +9,8 @@ const config = {
   // ความลับสำหรับยืนยันตัวตนกับ Management Web และ Render API
   managementWebSecret: process.env.MANAGEMENT_WEB_SECRET,
   internalSecret: process.env.LP_INTERNAL_SECRET,
+  // Base URL ของระบบจัดการกิลด์ (ตั้งผ่าน NEXT_PUBLIC_API_URL) — ตัด trailing slash กันเป็น //api
+  backendApiUrl: (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/+$/, ''),
 };
 
 module.exports = config;
